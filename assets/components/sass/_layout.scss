@@ -1,0 +1,19 @@
+// Susy setup ----------------------
+$total-columns          : 12;
+$column-width           : 4rem;
+$gutter-width           : 1rem;
+$grid-padding           : $gutter-width;
+
+@include border-box-sizing;
+
+$small                  : 30em;
+$medium                 : 47em;
+$large                  : 75em;
+
+// Content ------------------------
+.content {
+  @include fadeIn();
+  @include respond-to(handhelds) { width: 100%; margin-top: 15% ;}
+  @include respond-to(medium-screens) { width: 90%; margin: 10% auto;}
+  @include respond-to(wide-screens) { width: 52%; margin: 5% auto;}
+}
