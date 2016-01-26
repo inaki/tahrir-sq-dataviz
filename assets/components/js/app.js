@@ -3,9 +3,19 @@ var $window = $(window),
     height = $window.height(),
     padding = 50;
 
-function fullSize() {
+    window.onload = function() { init() };
 
-}
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1i4NHq0shKcwjK_WoCyZ0NlFHmUpK5AxnsnpHN3sx-YM/pubhtml';
+
+      function init() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         simpleSheet: true } )
+      }
+
+      function showInfo(data, tabletop) {
+        console.log(data);
+      }
 
 
 var viz = d3.select('#viz-wrapper')
@@ -82,5 +92,5 @@ d3.csv('data/egypt_protest_data.csv', function(data){
   renderProtests(protestByMonth[10], width/2 - 87, height/2 - 47, 210);
   renderProtests(protestByMonth[11], width/2 - 73, height/2 - 90, 240);
 
-  console.log(protestByMonth);
+
 });
