@@ -3,21 +3,6 @@ var $window = $(window),
     height = $window.height(),
     padding = 50;
 
-    window.onload = function() { init() };
-
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1i4NHq0shKcwjK_WoCyZ0NlFHmUpK5AxnsnpHN3sx-YM/pubhtml';
-
-      function init() {
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
-                         simpleSheet: true } )
-      }
-
-      function showInfo(data, tabletop) {
-        console.log(data);
-      }
-
-
 var viz = d3.select('#viz-wrapper')
       .append('svg')
       .attr('id', 'viz')
