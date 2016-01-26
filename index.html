@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <title>Tahrir Square Data Viz</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <style>
-  #viz {
-    width: 100vw;
-    height: 100vh;
-  }
-  div.tooltip {
-    background: #FFFCF9;
-    border: 0px;
-    border-radius: 4px;
-    font: 12px sans-serif;
-    max-width: 100px;
-    padding: 4px;
-    position: absolute;
-    pointer-events: none;
-    text-align: center;
-  }
-
-  </style>
 </head>
 <body>
+  <div id="side-left">
+    <h3>
+      In 2015 there were 544 protests.
+      <br><br>
+      164 were attacked.
+    </h3>
+    <br><br>
+    <ul class="groups">
+      <li>Muslim Brotherhood</li>
+      <li>Labor & Social</li>
+      <li>Students</li>
+      <li>Civil Powers</li>
+      <li>Pro-Regime</li>
+    </ul>
+  </div>
+
   <div id="viz-wrapper"></div>
+
+  <div id="side-right">
+    <h4>Total of Protest</h4>
+    <div id="chart-side"></div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="bower_components/d3/d3.min.js"></script>

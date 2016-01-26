@@ -27,6 +27,7 @@
   ],
   "dependencies": {
     "d3": "~3.5.13",
-    "animatewithsass": "~3.2.2"
+    "animatewithsass": "~3.2.2",
+    "susy": "~2.2.12"
   }
 }

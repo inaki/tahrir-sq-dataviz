@@ -1,0 +1,90 @@
+// viz and tooltip
+#viz {
+  border-top: 10px solid black;
+  width: 100vw;
+  height: 100vh;
+}
+div.tooltip {
+  background: #FFFCF9;
+  border: 0px;
+  border-radius: 4px;
+  font: 12px sans-serif;
+  max-width: 100px;
+  padding: 4px;
+  position: absolute;
+  pointer-events: none;
+  text-align: center;
+}
+
+// side-left styles
+#side-left {
+  background-color: RGBA(242, 235, 229, .5);
+  top: 10px;
+  width: 20vw;
+  height: 100vh;
+  position: absolute;
+  padding-top: 20vh;
+}
+#side-left h3 {
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 200;
+  font-size: 2em; }
+#side-left .groups {
+  text-align: left;
+  margin-left: 31px; }
+
+#side-left .groups li {
+  background: url("../images/chambray.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+#side-left .groups li:nth-child(2) {
+  background: url("../images/flamingo.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+#side-left .groups li:nth-child(3) {
+  background: url("../images/breakerbay.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+#side-left .groups li:nth-child(4) {
+  background: url("../images/blush.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+#side-left .groups li:nth-child(5) {
+  background: url("../images/sandrift.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+
+// side-right styles
+#side-right {
+  background-color: RGBA(242, 235, 229, .5);
+  top: 10px;
+  right: 0px;
+  width: 20vw;
+  height: 100vh;
+  padding-top: 15vh;
+  position: absolute;
+  h4 {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 30px;
+    font-weight: 200;
+    font-size: 1.5em;
+  }
+}
