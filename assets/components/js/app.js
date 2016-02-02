@@ -25,7 +25,7 @@ function renderProtests(data, gx, gy, rotation){
       .enter()
       .append('circle');
 
-  dots.attr('r', 3)
+  dots.attr('r', 4)
       .attr('cx', function(d, i){
           if (xCounter < 4) {
   					xCounter += 1; return x;
@@ -53,13 +53,26 @@ function renderProtests(data, gx, gy, rotation){
                 .duration(500)
                 .style("opacity", 0);
         })
-      .style('fill', function(d){return colors[d.GroupName]})
-      .style('padding', 0);
+      .style('fill', function(d){
+        if(d.Attacked == 'FALSE'){
+          return colors[d.GroupName];
+        } else {
+          return colorsAttacked[d.GroupName];
+        }
+      })
+      .style('stroke', function(d){
+        if(d.Attacked == 'TRUE'){
+          return 'gray';
+          console.log('d.Attacked')
+        }
+      })
+      .style(' stroke-width', '10');
       return group;
 }
 
 d3.csv('data/egypt_protest_data.csv', function(data){
-  colors = {'Muslim Brotherhood': '#4C5D84', 'Civil Protesters':'#BF4B6A', 'Student': '#549E9C', 'social and workers protestors': '#E96445', 'Pro Protesters':'#A98A78'};
+  colors = {'Muslim Brotherhood': 'rgba(76, 93, 132, 1)', 'Civil Protesters':'rgba(191, 77, 106, 1)', 'Student': 'rgba(84, 158, 157, 1)', 'social and workers protestors': 'rgba(233, 100, 69, 1)', 'Pro Protesters':'rgba(169, 138, 120, 1)'};
+  colorsAttacked = {'Muslim Brotherhood': 'rgba(76, 93, 132, 0.65)', 'Civil Protesters':'rgba(191, 77, 106, 0.65)', 'Student': 'rgba(84, 158, 157, 0.65)', 'social and workers protestors': 'rgba(233, 100, 69, 0.65)', 'Pro Protesters':'rgba(169, 138, 120, 0.65)'};
   var x = 0, y = 0;
   // copy of the data
   var protestByMonth = d3.nest()

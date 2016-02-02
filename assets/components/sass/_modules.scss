@@ -70,6 +70,13 @@ div.tooltip {
   line-height: 0.9em;
   margin-bottom: 10px; }
 
+#side-left .groups li:last-child {
+  background: url("../images/stroke.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
 
 // side-right styles
 #side-right {

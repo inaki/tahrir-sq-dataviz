@@ -7988,7 +7988,15 @@ div.tooltip {
   line-height: 0.9em;
   margin-bottom: 10px; }
 
-/* line 75, ../components/sass/_modules.scss */
+/* line 73, ../components/sass/_modules.scss */
+#side-left .groups li:last-child {
+  background: url("../images/stroke.svg") no-repeat left 3px;
+  background-size: 10px;
+  padding-left: 1em;
+  line-height: 0.9em;
+  margin-bottom: 10px; }
+
+/* line 82, ../components/sass/_modules.scss */
 #side-right {
   background-color: RGBA(242, 235, 229, 0.5);
   top: 10px;
@@ -7997,7 +8005,7 @@ div.tooltip {
   height: 100vh;
   padding-top: 15vh;
   position: absolute; }
-  /* line 83, ../components/sass/_modules.scss */
+  /* line 90, ../components/sass/_modules.scss */
   #side-right h4 {
     text-align: left;
     padding-left: 15px;
